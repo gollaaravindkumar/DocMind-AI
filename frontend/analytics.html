@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DocMind AI - Analytics &amp; Insights</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#b28cff",
+              "on-tertiary-fixed-variant": "#6c6d6e",
+              "outline-variant": "#484848",
+              "on-error": "#490013",
+              "surface-variant": "#262626",
+              "secondary-dim": "#40ceed",
+              "on-tertiary-fixed": "#4f5051",
+              "error": "#ff6e84",
+              "surface-container-low": "#131313",
+              "surface-container-highest": "#262626",
+              "secondary": "#53ddfc",
+              "error-dim": "#d73357",
+              "surface-container-lowest": "#000000",
+              "on-primary-fixed": "#000000",
+              "on-background": "#ffffff",
+              "secondary-fixed-dim": "#48d4f3",
+              "background": "#0e0e0e",
+              "tertiary-container": "#ebebeb",
+              "surface-bright": "#2c2c2c",
+              "surface-container": "#191919",
+              "on-secondary-fixed": "#003a45",
+              "inverse-primary": "#742fe5",
+              "on-primary-container": "#2e006c",
+              "secondary-fixed": "#65e1ff",
+              "on-secondary-fixed-variant": "#005969",
+              "surface-dim": "#0e0e0e",
+              "on-error-container": "#ffb2b9",
+              "tertiary": "#f9f9f9",
+              "primary-fixed-dim": "#a67aff",
+              "primary-dim": "#8a4cfc",
+              "on-primary-fixed-variant": "#390083",
+              "tertiary-fixed-dim": "#f0f1f1",
+              "on-primary": "#3c0089",
+              "secondary-container": "#00687a",
+              "on-secondary-container": "#ecfaff",
+              "primary-container": "#b28cff",
+              "on-secondary": "#004b58",
+              "error-container": "#a70138",
+              "inverse-surface": "#f9f9f9",
+              "on-tertiary-container": "#555757",
+              "surface-container-high": "#1f1f1f",
+              "tertiary-fixed": "#ffffff",
+              "on-surface-variant": "#ababab",
+              "tertiary-dim": "#ebebeb",
+              "on-surface": "#ffffff",
+              "surface-tint": "#bd9dff",
+              "inverse-on-surface": "#555555",
+              "on-tertiary": "#5e5f60",
+              "outline": "#757575",
+              "surface": "#0e0e0e",
+              "primary": "#bd9dff"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .purple-glow {
+            box-shadow: 0 8px 32px rgba(124, 58, 237, 0.3);
+        }
+        .cyan-glow {
+            box-shadow: 0 8px 32px rgba(6, 182, 212, 0.3);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav-glow {
+            box-shadow: 0 0 15px rgba(124, 58, 237, 0.5);
+        }
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #000000;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1f1f1f;
+            border-radius: 10px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-container-lowest min-h-screen pb-32">
+<!-- TopAppBar Execution -->
+<header class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-xl no-border bg-surface-low/20 shadow-[0_8px_32px_rgba(124,58,237,0.15)]">
+<div class="flex items-center justify-between px-6 h-20 w-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-violet-500 dark:text-violet-400 text-3xl" data-icon="analytics">analytics</span>
+<div class="flex flex-col">
+<h1 class="font-['Space_Grotesk'] font-bold tracking-tight text-white text-xl">Insights</h1>
+<span class="text-xs font-['Inter'] font-medium text-cyan-400 tracking-wider">Document Intelligence Overview</span>
+</div>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<nav class="flex gap-6">
+<a class="text-zinc-500 hover:opacity-80 transition-opacity font-['Space_Grotesk'] font-medium" href="#">Home</a>
+<a class="text-zinc-500 hover:opacity-80 transition-opacity font-['Space_Grotesk'] font-medium" href="#">Chat</a>
+<a class="text-white hover:opacity-80 transition-opacity font-['Space_Grotesk'] font-bold" href="#">Insights</a>
+<a class="text-zinc-500 hover:opacity-80 transition-opacity font-['Space_Grotesk'] font-medium" href="#">Settings</a>
+</nav>
+</div>
+</div>
+</header>
+<main class="pt-28 px-6 max-w-5xl mx-auto space-y-6">
+<!-- Row 1: Stat Cards -->
+<div class="grid grid-cols-2 gap-4">
+<!-- Card 1: Documents Indexed -->
+<div class="glass-card purple-glow rounded-xl p-6 flex flex-col justify-center items-center text-center scale-95 active:scale-90 transition-transform cursor-pointer">
+<span class="text-primary-fixed text-5xl font-['Space_Grotesk'] font-bold mb-1">3</span>
+<span class="text-on-surface-variant font-['Inter'] text-xs uppercase tracking-widest">Documents Indexed</span>
+</div>
+<!-- Card 2: Total Chunks -->
+<div class="glass-card cyan-glow rounded-xl p-6 flex flex-col justify-center items-center text-center scale-95 active:scale-90 transition-transform cursor-pointer">
+<span class="text-secondary-dim text-5xl font-['Space_Grotesk'] font-bold mb-1">847</span>
+<span class="text-on-surface-variant font-['Inter'] text-xs uppercase tracking-widest">Total Chunks</span>
+</div>
+</div>
+<!-- Row 2: Query History -->
+<section class="glass-card rounded-xl p-6 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
+<h2 class="font-['Space_Grotesk'] font-bold text-lg mb-6 text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-cyan-400" data-icon="history">history</span>
+                Query History
+            </h2>
+<div class="space-y-4">
+<div class="flex items-center justify-between py-2 border-b border-white/5 last:border-0">
+<span class="text-white font-['Inter'] text-sm leading-relaxed">Summarize the Q3 legal risk assessment</span>
+<span class="px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-[10px] rounded-full font-bold">98% RELEVANCE</span>
+</div>
+<div class="flex items-center justify-between py-2 border-b border-white/5 last:border-0">
+<span class="text-white font-['Inter'] text-sm leading-relaxed">Compare vendor pricing in the supply contract</span>
+<span class="px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-[10px] rounded-full font-bold">94% RELEVANCE</span>
+</div>
+<div class="flex items-center justify-between py-2 border-b border-white/5 last:border-0">
+<span class="text-white font-['Inter'] text-sm leading-relaxed">What are the termination clauses?</span>
+<span class="px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-[10px] rounded-full font-bold">87% RELEVANCE</span>
+</div>
+<div class="flex items-center justify-between py-2 border-b border-white/5 last:border-0">
+<span class="text-white font-['Inter'] text-sm leading-relaxed">Identify all parties mentioned in Exhibit A</span>
+<span class="px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-[10px] rounded-full font-bold">91% RELEVANCE</span>
+</div>
+</div>
+</section>
+<!-- Row 3: Top Source Documents -->
+<section class="glass-card rounded-xl p-6 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
+<h2 class="font-['Space_Grotesk'] font-bold text-lg mb-6 text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-violet-400" data-icon="description">description</span>
+                Top Source Documents
+            </h2>
+<div class="space-y-6">
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-['Inter'] font-medium text-on-surface-variant">
+<span>Legal_Master_Agreement_2024.pdf</span>
+<span class="text-white font-bold">42 Cites</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
+<div class="h-full bg-gradient-to-r from-violet-600 to-cyan-400 shadow-[0_0_10px_rgba(64,206,237,0.5)]" style="width: 85%"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-['Inter'] font-medium text-on-surface-variant">
+<span>Project_Alpha_Technical_Spec.docx</span>
+<span class="text-white font-bold">28 Cites</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
+<div class="h-full bg-gradient-to-r from-violet-600 to-cyan-400 shadow-[0_0_10px_rgba(64,206,237,0.5)]" style="width: 60%"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-['Inter'] font-medium text-on-surface-variant">
+<span>Quarterly_Financial_Report_Q3.pdf</span>
+<span class="text-white font-bold">15 Cites</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
+<div class="h-full bg-gradient-to-r from-violet-600 to-cyan-400 shadow-[0_0_10px_rgba(64,206,237,0.5)]" style="width: 35%"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Row 4: Chunk Retrieval Map -->
+<section class="glass-card rounded-xl p-6 shadow-[0_8px_32px_rgba(0,0,0,0.4)] mb-8">
+<h2 class="font-['Space_Grotesk'] font-bold text-lg mb-2 text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-cyan-400" data-icon="grid_view">grid_view</span>
+                Chunk Retrieval Map
+            </h2>
+<p class="text-xs text-on-surface-variant mb-6 font-['Inter']">Vector space density and active retrieval clusters</p>
+<div class="grid grid-cols-8 sm:grid-cols-12 md:grid-cols-16 gap-2">
+<!-- Heatmap grid items -->
+<div class="aspect-square bg-surface-container-high rounded-sm opacity-20"></div>
+<div class="aspect-square bg-surface-container-high rounded-sm opacity-40"></div>
+<div class="aspect-square bg-cyan-400 rounded-sm shadow-[0_0_8px_rgba(64,206,237,0.6)]"></div>
+<div class="aspect-square bg-surface-container-high rounded-sm opacity-30"></div>
+<div class="aspect-square bg-surface-container-high rounded-sm opacity-20"></div>
+<div class="aspect-square bg-surface-container-high rounded-sm opacity-10"></div>
+<div class="aspect-square bg-surface-container-high rounded-sm opacity-50"></div>
+<div class="aspect-square bg-cyan-400 rounded-sm shadow-[0_0_8px_rgba(64,206,237,0.6)]"></div>
+<div class="aspect-square bg-surface-container-high rounded-sm opacity-20"></div>
+<div class="aspect-square bg-surface-container-high rounded-sm opacity-10"></div>
+<div class="aspect-square bg-surface-container-high rounded-sm opacity-20"></div>
+<div class="aspect-square bg-surface-container-high rounded-sm opacity-40"></div>
+<div class="aspect-square bg-cyan-500/40 rounded-sm border border-cyan-500/20"></div>
+<div class="aspect-square bg-surface-container-high rounded-sm opacity-10"></div>
+<div class="aspect-square bg-cyan-400 rounded-sm shadow-[0_0_8px_rgba(64,206,237,0.6)]"></div>
+<div class="aspect-square bg-surface-container-high rounded-sm opacity-20"></div>
+<!-- Repeat for aesthetic density -->
+<div class="aspect-square bg-surface-container-high rounded-sm opacity-10"></div>
+<div class="aspect-square bg-surface-container-high rounded-sm opacity-30"></div>
+<div class="aspect-square bg-surface-container-high rounded-sm opacity-20"></div>
+<div class="aspect-square bg-cyan-400 rounded-sm shadow-[0_0_8px_rgba(64,206,237,0.6)]"></div>
+<div class="aspect-square bg-surface-container-high rounded-sm opacity-10"></div>
+<div class="aspect-square bg-surface-container-high rounded-sm opacity-20"></div>
+<div class="aspect-square bg-surface-container-high rounded-sm opacity-40"></div>
+<div class="aspect-square bg-surface-container-high rounded-sm opacity-20"></div>
+<div class="aspect-square bg-surface-container-high rounded-sm opacity-10"></div>
+<div class="aspect-square bg-cyan-500/20 rounded-sm"></div>
+<div class="aspect-square bg-surface-container-high rounded-sm opacity-40"></div>
+<div class="aspect-square bg-surface-container-high rounded-sm opacity-30"></div>
+<div class="aspect-square bg-surface-container-high rounded-sm opacity-10"></div>
+<div class="aspect-square bg-cyan-400 rounded-sm shadow-[0_0_8px_rgba(64,206,237,0.6)]"></div>
+<div class="aspect-square bg-surface-container-high rounded-sm opacity-20"></div>
+<div class="aspect-square bg-surface-container-high rounded-sm opacity-10"></div>
+<!-- Filling rows -->
+<div class="hidden md:block aspect-square bg-surface-container-high rounded-sm opacity-10"></div>
+<div class="hidden md:block aspect-square bg-surface-container-high rounded-sm opacity-20"></div>
+<div class="hidden md:block aspect-square bg-cyan-400 rounded-sm shadow-[0_0_8px_rgba(64,206,237,0.6)]"></div>
+<div class="hidden md:block aspect-square bg-surface-container-high rounded-sm opacity-30"></div>
+<div class="hidden md:block aspect-square bg-surface-container-high rounded-sm opacity-20"></div>
+<div class="hidden md:block aspect-square bg-surface-container-high rounded-sm opacity-10"></div>
+<div class="hidden md:block aspect-square bg-surface-container-high rounded-sm opacity-50"></div>
+<div class="hidden md:block aspect-square bg-cyan-400 rounded-sm shadow-[0_0_8px_rgba(64,206,237,0.6)]"></div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar Execution -->
+<nav class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-md rounded-3xl border border-white/10 z-50 bg-white/5 dark:bg-black/20 backdrop-blur-2xl flex justify-around items-center px-4 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
+<a class="flex items-center justify-center text-zinc-500 p-3 hover:text-white transition-colors active:scale-95 duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+</a>
+<a class="flex items-center justify-center text-zinc-500 p-3 hover:text-white transition-colors active:scale-95 duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+</a>
+<!-- ACTIVE TAB: Insights -->
+<a class="flex items-center justify-center bg-gradient-to-br from-violet-600/20 to-cyan-500/20 text-cyan-400 rounded-xl p-3 shadow-[0_0_15px_rgba(64,206,237,0.3)] active:scale-95 duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="insights">insights</span>
+</a>
+<a class="flex items-center justify-center text-zinc-500 p-3 hover:text-white transition-colors active:scale-95 duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</a>
+</nav>
+</body></html>
